@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart'; // Pantalla de Login
-import 'register_screen.dart'; // Pantalla de Registro
+import 'login_screen.dart';
+import 'register_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -16,29 +16,25 @@ class WelcomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Imagen ilustración de reciclaje
               Image.asset(
-                'assets/images/recycling_illustration.png', // Ruta de la ilustración
+                'assets/images/recycling_illustration.png',
                 width: 250,
                 height: 250,
                 fit: BoxFit.contain,
               ),
               const SizedBox(height: 20),
-
-              // Logo EcoRecycle
               Image.asset(
-                'assets/images/recycling_logo.png', // Ruta del logo
-                width: 100, // Ajusta el tamaño del logo
-                height: 100, // Ajusta el tamaño del logo
+                'assets/images/recycling_logo.png',
+                width: 100,
+                height: 100,
               ),
               const SizedBox(height: 20),
-
               const Text(
                 'EcoRecycle',
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.w600,
-                  color: Color(0xFF56D859), // Color verde
+                  color: Color(0xFF56D859),
                 ),
               ),
               const SizedBox(height: 20),
@@ -54,14 +50,15 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 40),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFFB8C00), // Color naranja
+                  backgroundColor: Color(0xFFFB8C00),  // Color naranja
                   padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const LoginScreen()));
+                  // Navegación a la pantalla de inicio de sesión usando la ruta definida
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: const Text(
                   'Iniciar sesión',
@@ -71,13 +68,15 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 16),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => const RegisterScreen()));
+                  // Navegación a la pantalla de registro usando la ruta definida
+                  Navigator.pushNamed(context, '/register');
                 },
                 child: const Text(
                   'Registrarse',
                   style: TextStyle(fontSize: 16, color: Color(0xFF56D859)),
                 ),
               ),
+
             ],
           ),
         ),

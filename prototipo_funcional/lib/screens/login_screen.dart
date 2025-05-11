@@ -11,7 +11,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  // Simulación de inicio de sesión (sin Firebase)
+  // inicio de sesión
   void _login() {
     if (_emailController.text.isNotEmpty && _passwordController.text.isNotEmpty) {
       // Mostrar mensaje de éxito
@@ -21,8 +21,8 @@ class _LoginScreenState extends State<LoginScreen> {
           backgroundColor: Colors.green,
         ),
       );
-      // Redirigir a la pantalla principal (o a la pantalla que quieras)
-      Navigator.pushReplacementNamed(context, '/home');
+      // Redirigir a la pantalla principal
+      Navigator.pushReplacementNamed(context, '/home'); // Redirige al home
     } else {
       // Mostrar error si los campos están vacíos
       ScaffoldMessenger.of(context).showSnackBar(
@@ -33,6 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
             // Enlace de "Olvidaste tu contraseña?"
             TextButton(
               onPressed: () {
-                // Aquí podrías implementar la navegación a una pantalla de recuperación de contraseña
+
               },
               child: const Text('¿Olvidaste tu contraseña?'),
             ),
@@ -90,25 +91,24 @@ class _LoginScreenState extends State<LoginScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Botón de Facebook (solo icono)
+                // Botón de Facebook
                 IconButton(
                   icon: const Icon(Icons.facebook),
                   onPressed: () {
-                    // Aquí podrías agregar lógica para integrar con Facebook (si lo deseas)
                   },
                 ),
-                // Botón de Google (solo icono)
+                // Botón de Google
                 IconButton(
                   icon: const Icon(Icons.g_translate),
                   onPressed: () {
-                    // Aquí podrías agregar lógica para integrar con Google (si lo deseas)
+
                   },
                 ),
-                // Botón de Apple (solo icono)
+                // Botón de Apple
                 IconButton(
                   icon: const Icon(Icons.apple),
                   onPressed: () {
-                    // Aquí podrías agregar lógica para integrar con Apple (si lo deseas)
+
                   },
                 ),
               ],

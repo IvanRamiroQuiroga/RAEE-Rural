@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:prototipo_funcional/screens/home_screen.dart';
-import 'package:prototipo_funcional/screens/map_screen.dart';
 import 'package:prototipo_funcional/screens/recycling_centers_screen.dart';
 import 'package:prototipo_funcional/screens/educational_screen.dart';
 import 'package:prototipo_funcional/screens/profile_screen.dart';
+import 'package:prototipo_funcional/screens/home_screen.dart';
+import 'package:prototipo_funcional/screens/map_screen.dart';
+
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    HomeScreen(),
+    MainScreen(),
     MapScreen(),
     RecyclingCentersScreen(),
     EducationalScreen(),
@@ -60,3 +61,4 @@ class _MainNavigationState extends State<MainNavigation> {
     );
   }
 }
+

@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  google_maps_flutter: ^2.1.1  # Mantén esta versión para dispositivos móviles
+  google_maps_flutter_web: ^0.5.12  # Cambia a esta versión para la web
+
 
 dev_dependencies:
   flutter_test:
@@ -22,3 +25,7 @@ flutter:
   assets:
     - assets/images/recycling_logo.png
     - assets/images/recycling_illustration.png
+    - assets/images/profile_picture.png
+    - assets/images/map_simulation.png
+    - assets/images/andres_profile.png
+    - assets/images/luz_profile.png
